@@ -43,3 +43,21 @@
     --font-weight-medium: 500;
     --font-weight-bold: 700;
 }
+
+/* Body Element Style */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
