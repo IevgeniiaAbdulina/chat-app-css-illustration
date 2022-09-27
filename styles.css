@@ -61,3 +61,47 @@ body {
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
+
+/* Background Body Elemet Style */
+.background-container {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -2;
+    background-color: var(--white);
+}
+
+.background-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 350px;
+    height: 600px;
+    background: linear-gradient(
+        45deg,
+        var(--light-violet),
+        var(--light-magenta)
+    );
+    border-bottom-left-radius: 100% 50%;
+    border-bottom-right-radius: 100% 50%;
+}
+
+.background-container::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    width: 350px;
+    height: 600px;
+    background: linear-gradient(
+        -45deg,
+        var(--light-violet),
+        var(--light-magenta)
+    );
+    border-top-left-radius: 100% 50%;
+    border-top-right-radius: 100% 50%;
+    opacity: .1;
+}
